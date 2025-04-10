@@ -7,9 +7,7 @@ load_dotenv()
 # API Keys and credentials
 SCRAPER_API_KEY = os.getenv("SCRAPER_API_KEY")
 MONGODB_URI = os.getenv("MONGODB_URI")
-REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
-REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
-REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", "")
+REDIS_URI = os.getenv("REDIS_URI", "redis://localhost:6379/0")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 

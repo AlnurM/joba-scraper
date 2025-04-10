@@ -17,10 +17,8 @@ class RedisService:
     def connect(self):
         """Connect to Redis server."""
         try:
-            self.redis = Redis(
-                host=settings.REDIS_HOST,
-                port=settings.REDIS_PORT,
-                password=settings.REDIS_PASSWORD,
+            self.redis = Redis.from_url(
+                settings.REDIS_URI,
                 decode_responses=True
             )
             # Check connection
